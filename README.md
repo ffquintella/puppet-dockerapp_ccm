@@ -32,7 +32,16 @@ Basic use of the module
 
 ```
 class {'dockerapp_ccm':
-  
+  version => '1.5.51',
+  ports => ['4443:443'],
+  redis_server => 'redis.server.com',
+  redis_port = '6379',
+  redis_database = '1',
+  masterkey = 'SuPeRsEcReTkEy',
+  service_name = 'ccm',
+  smpt_server = 'smtp.abc.com',
+  email_from = 'CCM@abc.com',
+  email_name = 'CCM Server',
 }
 
 ```
