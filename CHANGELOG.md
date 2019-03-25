@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 
 **Bugfixes**
 
-* Epel repository
+* RedHat and Debian checking
 
 **Known Issues**
 

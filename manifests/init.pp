@@ -109,8 +109,14 @@ class dockerapp_ccm  (
   $dir_owner = 999
 
   #Extra packages
-  package{'epel-release':}
-  -> package{'redis-tools':}
+
+  if($::osfamily == 'RedHat'){
+    package{'epel-release':}
+    -> package{'redis':}
+  }
+  if($::osfamily == 'Debian'){
+    package{'redis-tools':}
+  }
 
   #CCM 
   $image = "ffquintella/ccm:${version}"
