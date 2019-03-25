@@ -109,7 +109,8 @@ class dockerapp_ccm  (
   $dir_owner = 999
 
   #Extra packages
-  package{'redis-tools':}
+  package{'epel-release':}
+  -> package{'redis-tools':}
 
   #CCM 
   $image = "ffquintella/ccm:${version}"
