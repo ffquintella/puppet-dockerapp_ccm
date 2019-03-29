@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.0.5
+
+**Features**
+
+* Added support for vault server
+* Added support for ldap configs
+
+**Bugfixes**
+
+* Redis configurations bug
+
+**Known Issues**
+
+## Release 1.0.4
+
+**Features**
+
+* Added support for redis slave servers
+* Added support for redis secure connections
+
+**Bugfixes**
+
+**Known Issues**
+
 ## Release 1.0.3
 
 **Features**

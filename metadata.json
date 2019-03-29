@@ -1,6 +1,6 @@
 {
   "name": "ffquintella-dockerapp_ccm",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "author": "Felipe Quintella",
   "summary": "This module installs and configures the CCM app using a docker container",
   "license": "GPL-3.0-or-later",
@@ -17,8 +17,12 @@
       "version_requirement": ">= 3.5.0 < 4.0.0"
     },
     {
-      "name": "ffquintella/dockerapp",
+      "name": "puppetlabs/dockerapp_spiped",
       "version_requirement": ">= 1.0.1 < 2.0.0"
+    },
+    {
+      "name": "ffquintella/dockerapp",
+      "version_requirement": ">= 1.0.5 < 2.0.0"
     }
   ],
   "operatingsystem_support": [

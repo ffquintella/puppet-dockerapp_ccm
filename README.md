@@ -24,7 +24,7 @@ This module creates some directories under /srv with the service_name provided
 
 ### Beginning with dockerapp_ccm
 
-To use this module you install it and follor the instructions in usage
+To use this module you install it and follow the instructions in usage
 
 ## Usage
 
