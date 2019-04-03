@@ -27,7 +27,7 @@ describe '::dockerapp_ccm' do
       vault_main_server: 'vault1',
       vault_secundary_server: 'vault2',
       vault_base_uri: '/api',
-      vault_api_token: 'api-key-1'
+      vault_api_token: 'api-key-1',
     }
   end
 
@@ -62,6 +62,7 @@ describe '::dockerapp_ccm' do
   it { is_expected.to contain_file('/srv/application-lib/ccm') }
   it { is_expected.to contain_file('/srv/application-log/ccm') }
   it { is_expected.to contain_file('/srv/scripts/ccm') }
+  it { is_expected.to contain_file('/usr/local/bin/ccm_data') }
 
   it {
     is_expected.to contain_dockerapp__run('ccm')
