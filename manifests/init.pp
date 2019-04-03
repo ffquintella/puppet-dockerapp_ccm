@@ -226,6 +226,11 @@ class dockerapp_ccm  (
     require => File[$conf_configdir],
     content => $ccm_masterkey,
   }
+  file {'/usr/local/bin/ccm_data':
+    content => "#!/bin/bash 
+  docker exec -ti ${service_name} /usr/local/bin/ccm_data \$@",
+    mode    => '0755',
+  }
 
   if $ssl_cert != undef {
     if $ssl_key == undef { fail('With ssl_cert defined ssl_key is mandatory!') }
