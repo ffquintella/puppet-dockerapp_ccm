@@ -3,7 +3,10 @@
 ---
 fixtures:
   forge_modules:
-     stdlib: "puppetlabs/stdlib"
-     docker: "puppetlabs/docker"
-     yumrepo: "puppetlabs/yumrepo_core"
-     dockerapp: "ffquintella/dockerapp"
+    stdlib: "puppetlabs/stdlib"
+    docker: "puppetlabs/docker"
+    yumrepo: "puppetlabs/yumrepo_core"
+    dockerapp: 
+      repo: "ffquintella/dockerapp"
+      ref: ">= 1.1.1"
+     

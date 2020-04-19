@@ -317,6 +317,7 @@ class dockerapp_ccm  (
       port_out => $redis_port,
       ip_out   => $redis_server,
       type     => 'out',
+      net      => "${service_name}-net",
       key      => $sp_key,
     }
 
@@ -327,6 +328,7 @@ class dockerapp_ccm  (
         port_out => $redis_slave_port,
         ip_out   => $redis_slave_server,
         type     => 'out',
+        net      => "${service_name}-net",
         key      => $sp_key,
       }
 
@@ -343,6 +345,7 @@ class dockerapp_ccm  (
       volumes      => $volumes,
       environments => $envs,
       links        => $links,
+      net          => "${service_name}-net",
       require      => $dapp_require,
     }
 

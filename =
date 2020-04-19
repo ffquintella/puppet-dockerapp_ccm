@@ -1,0 +1,5 @@
+[mNotice: Preparing to install into /Users/felipe/Dev/puppet-dockerapp_ccm/spec/fixtures/modules ...[0m
+[mNotice: Downloading from https://forgeapi.puppet.com ...[0m
+[mNotice: Installing -- do not interrupt ...[0m
+/Users/felipe/Dev/puppet-dockerapp_ccm/spec/fixtures/modules
+└── ffquintella-dockerapp ([0;36mv1.1.1[0m)

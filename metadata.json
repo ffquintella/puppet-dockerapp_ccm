@@ -1,6 +1,6 @@
 {
   "name": "ffquintella-dockerapp_ccm",
-  "version": "1.0.7",
+  "version": "1.1.1",
   "author": "Felipe Quintella",
   "summary": "This module installs and configures the CCM app using a docker container",
   "license": "GPL-3.0-or-later",
