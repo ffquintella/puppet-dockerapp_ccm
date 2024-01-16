@@ -182,11 +182,11 @@ class dockerapp_ccm  (
 
   #Extra packages
 
-  if($::osfamily == 'RedHat'){
+  if($facts['os']['family'] == 'RedHat'){
     package{'epel-release':}
     -> package{'redis':}
   }
-  if($::osfamily == 'Debian'){
+  if($facts['os']['family'] == 'Debian'){
     package{'redis-tools':}
   }
 
@@ -311,7 +311,7 @@ class dockerapp_ccm  (
     $sp_redis_port_master = 16379
     $sp_redis_port_slave = 26379
 
-    ::dockerapp_spiped {"${sp_service_name}-master":
+    dockerapp_spiped {"${sp_service_name}-master":
       version  => $spiped_version,
       port_in  => $sp_redis_port_master,
       port_out => $redis_port,
@@ -322,7 +322,7 @@ class dockerapp_ccm  (
     }
 
     if $redis_slave_server != undef {
-      ::dockerapp_spiped {"${sp_service_name}-slave":
+      dockerapp_spiped {"${sp_service_name}-slave":
         version  => $spiped_version,
         port_in  => $sp_redis_port_slave,
         port_out => $redis_slave_port,
